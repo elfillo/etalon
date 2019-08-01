@@ -31,15 +31,15 @@ function art_woo_add_custom_fields() {
     <div class="options_group">
         <h2><strong>Габариты</strong></h2>
         <p class="form-field custom_field_type">
-            <label for="custom_field_type"><?php echo 'Размер (см)'; ?></label> <span class="wrap">
-      <input placeholder="Длина" class="input-text wc_input_decimal" size="6" type="text" name="_pack_length"
-             value="<?php echo get_post_meta( $post->ID, '_pack_length', true ); ?>"
+            <label for="custom_field_type"><?php echo 'Размер (мм)'; ?></label> <span class="wrap">
+      <input placeholder="Высота" class="input-text wc_input_decimal" size="6" type="text" name="_pack_length"
+             value="<?php echo get_post_meta( $post->ID, 'pack_length', true ); ?>"
              style="width: 15.75%;margin-right: 2%;"/>
       <input placeholder="Ширина" class="input-text wc_input_decimal" size="6" type="text" name="_pack_width"
-             value="<?php echo get_post_meta( $post->ID, '_pack_width', true ); ?>"
+             value="<?php echo get_post_meta( $post->ID, 'pack_width', true ); ?>"
              style="width: 15.75%;margin-right: 2%;"/>
-      <input placeholder="Высота" class="input-text wc_input_decimal" size="6" type="text" name="_pack_height"
-             value="<?php echo get_post_meta( $post->ID, '_pack_height', true ); ?>"
+      <input placeholder="Глубина" class="input-text wc_input_decimal" size="6" type="text" name="_pack_height"
+             value="<?php echo get_post_meta( $post->ID, 'pack_height', true ); ?>"
              style="width: 15.75%;margin-right: 0;"/>
    </span>
         </p>

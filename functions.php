@@ -17,7 +17,10 @@ function enqueue_script(){
 }
 add_action('wp_enqueue_scripts', 'enqueue_script');
 //header_menu
-register_nav_menu('Header', 'HeaderMenu');
+register_nav_menu('Header', 'Меню под поиском в хэдере');
+register_nav_menu('Footer_col_1', 'Футер, 1-я колонка');
+register_nav_menu('Footer_col_2', 'Футер, 2-я колонка');
+register_nav_menu('Footer_col_3', 'Футер, 3-я колонка');
 
 //add thumbnails
 add_theme_support( 'post-thumbnails' );

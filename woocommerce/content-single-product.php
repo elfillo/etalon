@@ -31,8 +31,15 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+<section class="page_detail container">
+    <div class="sale_banner"></div>
+    <div class="product">
+        <div class="breadcrumbs">
+            <?php echo  woocommerce_breadcrumb()?>
+        </div>
+        <div class="product_detail" id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
+    <div class="product_detail--image">
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -42,9 +49,36 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_before_single_product_summary' );
 	?>
+    </div>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary product_detail--text">
 		<?php
+        the_title( '<div class="title">', '</div>' );
+        ?>
+        <div class="params">
+            Материал: <span><?php echo get_post_meta($post->ID, '_textarea', true)?></span><br/>
+            Размеры:<br/>
+            Высота: <span><?php echo get_post_meta($post->ID, 'pack_length', true)?> мм</span><br/>
+            Ширина: <span><?php echo get_post_meta($post->ID, 'pack_width', true)?> мм</span><br/>
+            Глубина: <span><?php echo get_post_meta($post->ID, 'pack_height', true)?> мм</span><br/>
+        </div>
+        <div class="description">
+            <?php  echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );?>
+        </div>
+        <div class="bottom">
+            <div class="colors">
+                Цвета: <br />
+                <div class="items">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="button"><div class="btn">Заказать</div></div>
+        </div>
+        <?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
@@ -57,20 +91,25 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
-		do_action( 'woocommerce_single_product_summary' );
+		//do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
 
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
-</div>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+</div>
+        <div>
+            <?php
+            /**
+             * Hook: woocommerce_after_single_product_summary.
+             *
+             * @hooked woocommerce_output_product_data_tabs - 10
+             * @hooked woocommerce_upsell_display - 15
+             * @hooked woocommerce_output_related_products - 20
+             */
+            do_action( 'woocommerce_after_single_product_summary' );
+            ?>
+            <?php do_action( 'woocommerce_after_single_product' ); ?>
+        </div>
+    </div>
+</section>
+

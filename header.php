@@ -27,32 +27,8 @@
     </div>
     <div class="header--bottom">
         <nav class="header_menu">
-            <ul class="header_menu--list">
-                <li><a href="#">О центре</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Дизайн</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Гостевой визит</a></li>
-            </ul>
+            <?php wp_nav_menu(array('theme_location'=>'Header', 'menu_class'=>'header_menu--list') );?>
         </nav>
     </div>
 </header>
-<section class="container">
-    <?php
-    echo do_shortcode('[products]');
-    /*$args = array(
-        'post_type'      => 'product',
-    );
-
-    $loop = new WP_Query( $args );
-
-    while ( $loop->have_posts() ) : $loop->the_post();
-        echo '<br/>' . get_the_title();
-    endwhile;
-
-    wp_reset_query();*/
-    ?>
-</section>
-<section class="map" id="map"></section>
-<?php //wp_nav_menu(array('theme_location'=>'Header', 'menu_class'=>'header_nav_list') );?>
 

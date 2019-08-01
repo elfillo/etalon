@@ -13,76 +13,15 @@
         <div class="container">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
+                    <?php if (have_posts()): query_posts('category_name=partners'); while (have_posts()): the_post(); ?>
+                        <div class="swiper-slide">
+                            <div class="partner">
+                                <div class="partner__img">
+                                    <?php the_post_thumbnail()?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_2.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_3.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="partner">
-                            <div class="partner__img">
-                                <img src="<?php echo get_template_directory_uri() ?>/img/partners/partners_1.png" alt="#">
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile; endif;?>
                 </div>
                 <div class="partners_button">
                     <div class="btn">Подробнее</div>
@@ -98,152 +37,7 @@
     <section class="promo_product">
         <div class="container">
             <div class="shop">
-                <div class="shop_list">
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                    <div class="shop_list--item">
-                        <div class="image">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banners/product_img.png" alt="#">
-                        </div>
-                        <div class="text">
-                            <div class="name">Столик для спальни Richard Wagner 200R</div>
-                            <div class="material">Материал: металл, стекло</div>
-                            <div class="color">
-                                <span>Цвета:</span>
-                                <div class="items">
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                    <div class="item"></div>
-                                </div>
-                            </div>
-                            <div class="buy"><div class="btn">Подробнее</div></div>
-                        </div>
-                    </div>
-                </div>
+                <?php echo do_shortcode('[products]');?>
                 <div class="shop--show_all">
                     <div class="btn btn--dark btn--big">Посмотреть все товары</div>
                 </div>
