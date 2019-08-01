@@ -1,0 +1,29 @@
+@import "variables"
+
+.partners
+  width: 100%
+  margin-bottom: 64px
+  &_arrow
+    background-image: url("./../img/icons/arrow.png") !important
+    &:focus
+      outline: none !important
+      border: none !important
+    &--right
+      transform: rotate(-90deg)
+    &--left
+      transform: rotate(90deg)
+  &_button
+    width: 100%
+    display: flex
+    justify-content: center
+
+.partner
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    width: 100%
+    height: auto
+    display: flex
+    align-items: center
+    justify-content: center

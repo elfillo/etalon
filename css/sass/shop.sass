@@ -1,0 +1,147 @@
+@import "variables"
+
+.shop
+  width: 100%
+  &_list
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    &--item
+      width: 310px
+      margin-right: 10px
+      margin-bottom: 20px
+      &:nth-child(4)
+        margin-right: 0
+      .image
+        width: 100%
+        height: 165px
+        border-radius: 4px 0
+        margin-bottom: 15px
+        overflow: hidden
+        img
+          width: 100%
+          height: auto
+          display: flex
+          align-items: flex-start
+          justify-content: center
+      .text
+        width: 100%
+        padding: 0 10px 0 21px
+        position: relative
+        .name
+          width: 100%
+          font-size: 16px
+          font-weight: 700
+          margin-bottom: 10px
+        .material
+          font-size: 13px
+          font-weight: 400
+          margin-bottom: 10px
+        .color
+          width: 100%
+          span
+            display: flex
+            width: 100%
+            margin-bottom: 10px
+          .items
+            width: 100%
+            display: flex
+            .item
+              width: 13px
+              height: 13px
+              margin-right: 13px
+              border-radius: 100%
+              border: 1px solid #131313
+              background-color: $red
+              &:last-child
+                margin-right: 0
+        .buy
+          position: absolute
+          bottom: 0
+          right: 10px
+
+
+
+  &--show_all
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 10px
+    margin-bottom: 20px
+
+.page_detail
+  display: flex
+  margin-top: 50px !important
+  min-height: 650px
+  .sale_banner
+    width: 310px
+    height: auto
+    background: url("./../img/banners/banner_detail.png") no-repeat center
+    background-size: cover
+    margin-right: 30px
+
+.product
+  &_detail
+    width: 920px
+    display: flex
+    &--image
+      width: 50%
+      display: flex
+      flex-wrap: wrap
+      img
+        overflow: hidden
+        margin-bottom: 5px
+        cursor: pointer
+        &:first-child
+          width: 100%
+          height: 250px
+          margin-right: 0
+        width: 24.25%
+        height: 55px
+        margin-right: 1%
+        &:nth-child(5)
+          margin-right: 0
+    &--text
+      width: 50%
+      display: flex
+      flex-direction: column
+      padding: 0 15px
+      .title
+        width: 100%
+        font-size: 21px
+        font-weight: 700
+        margin-bottom: 10px
+      .params
+        width: 100%
+        font-size: 13px
+        line-height: 19px
+        margin-bottom: 16px
+      .description
+        width: 100%
+        font-size: 13px
+        line-height: 19px
+        margin-bottom: 16px
+      .bottom
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin-top: auto
+        .colors
+          padding-bottom: 5px
+          .items
+            display: flex
+            margin-top: 13px
+            .item
+              width: 13px
+              height: 13px
+              margin-right: 13px
+              border-radius: 100%
+              border: 1px solid #131313
+              background-color: $red
+              &:last-child
+                margin-right: 0
+.breadcrumbs
+  width: 100%
+  font-size: 16px
+  margin-bottom: 24px
