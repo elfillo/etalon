@@ -23,14 +23,14 @@
                         </div>
                     <?php endwhile; endif;?>
                 </div>
-                <div class="partners_button">
-                    <div class="btn">Подробнее</div>
-                </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next partners_arrow partners_arrow--right"></div>
                 <div class="swiper-button-prev partners_arrow partners_arrow--left"></div>
+            </div>
+            <div class="partners_button">
+                <div class="btn">Подробнее</div>
             </div>
         </div>
     </section>

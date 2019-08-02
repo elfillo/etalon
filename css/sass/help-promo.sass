@@ -9,6 +9,8 @@
     width: 352px
     display: flex
     flex-direction: column
+    @media screen and (max-width: 1280px)
+      width: 100%
     .title
       width: 100%
       font-size: 24px
@@ -24,6 +26,11 @@
     .button
       width: 100%
       margin-top: auto
+      @media screen and (max-width: 1280px)
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-top: 15px
   .banner
     width: 800px
     height: 300px
@@ -33,3 +40,5 @@
     font-size: 40px
     padding: 20px
     border-radius: 4px
+    @media screen and (max-width: 1280px)
+      display: none

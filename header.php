@@ -24,11 +24,27 @@
                 <span>+7 (3952) 707-131</span>
             </a>
         </div>
+        <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="header--middle">
+        <div class="btn">Каталог</div>
     </div>
     <div class="header--bottom">
         <nav class="header_menu">
             <?php wp_nav_menu(array('theme_location'=>'Header', 'menu_class'=>'header_menu--list') );?>
         </nav>
+    </div>
+    <div class="header_mobile--main">
+        <?php wp_nav_menu(array('theme_location'=>'mobile_main', 'menu_class'=>'mobile_menu--main') );?>
+    </div>
+    <div class="header_mobile--catalog">
+        <div class="group">
+            <div class="search">
+                <input type="text" placeholder="Я ищу...">
+            </div>
+            <div class="header_mobile--catalog_close"><span></span><span></span></div>
+        </div>
+        <?php wp_nav_menu(array('theme_location'=>'mobile_catalog', 'menu_class'=>'mobile_menu--catalog') );?>
     </div>
 </header>
 

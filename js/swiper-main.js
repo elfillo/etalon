@@ -7,10 +7,10 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    // breakpoints: {
-    //     1280: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 10
-    //     },
-    // }
+    breakpoints: {
+        1280: {
+            slidesPerView: 1,
+            spaceBetween: 0
+        },
+    }
 });
