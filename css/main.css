@@ -514,7 +514,7 @@
       .shop_list--item .image {
         width: 100%;
         height: 165px;
-        border-radius: 4px 0;
+        border-radius: 4px 4px 0 0;
         margin-bottom: 15px;
         overflow: hidden; }
         .shop_list--item .image img {
@@ -717,6 +717,12 @@
   width: 100%;
   font-size: 16px;
   margin-bottom: 24px; }
+
+.product .tabs.wc-tabs {
+  display: none; }
+
+.woocommerce-Tabs-panel h2:first-child {
+  display: none; }
 
 .help_promo {
   width: 100%;

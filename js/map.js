@@ -21,6 +21,6 @@ function initMap() {
     var marker1 = new google.maps.Marker({
         position: adress1,
         map: map,
-        icon: './wp-content/themes/etalon/img/icons/marker_map.png'
+        icon: '/wp-content/themes/etalon/img/icons/marker_map.png'
     });
 }

@@ -25,12 +25,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div class="shop_list--item">
-    <div class="image">
-        <?php the_post_thumbnail()?>
-    </div>
+    <a href="<?php echo get_post_permalink()?>">
+        <div class="image">
+            <?php the_post_thumbnail()?>
+        </div>
+    </a>
     <div class="text">
-        <div class="name"><?php echo the_title()?></div>
-        <div class="material">Материал: <?php echo get_post_meta($post->ID, '_textarea', true)?></div>
+        <a href="<?php echo get_post_permalink()?>" class="name"><?php echo the_title()?></a>
+        <!--<div class="material">Материал: <?php /*echo get_post_meta($post->ID, '_textarea', true)*/?></div>-->
         <div class="color">
             <span>Цвета:</span>
             <div class="items">

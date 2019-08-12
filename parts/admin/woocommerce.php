@@ -12,7 +12,7 @@ function art_woo_add_custom_fields() {
     echo '<div class="options_group">';// Группировка полей
 
     // Тектовая область
-    woocommerce_wp_textarea_input( array(
+    /*woocommerce_wp_textarea_input( array(
         'id'            => '_textarea', // Идентификатор поля
         'label'         => 'Список материалов', // Заголовок поля
         'placeholder'   => 'Металл, Стекло, и прочее ...', // Надпись внутри поля
@@ -24,7 +24,7 @@ function art_woo_add_custom_fields() {
         'name'          => 'textarea-field', // Имя поля
         'rows'          => '5', //Высота поля в строках текста.
         'col'           => '10', //Ширина поля в символах.
-    ) );
+    ) );*/
     ?>
 
     </div>
@@ -32,13 +32,13 @@ function art_woo_add_custom_fields() {
         <h2><strong>Габариты</strong></h2>
         <p class="form-field custom_field_type">
             <label for="custom_field_type"><?php echo 'Размер (мм)'; ?></label> <span class="wrap">
-      <input placeholder="Высота" class="input-text wc_input_decimal" size="6" type="text" name="_pack_length"
+      <input placeholder="Высота" class="input-text" type="text" name="_pack_length"
              value="<?php echo get_post_meta( $post->ID, 'pack_length', true ); ?>"
              style="width: 15.75%;margin-right: 2%;"/>
-      <input placeholder="Ширина" class="input-text wc_input_decimal" size="6" type="text" name="_pack_width"
+      <input placeholder="Ширина" class="input-text" type="text" name="_pack_width"
              value="<?php echo get_post_meta( $post->ID, 'pack_width', true ); ?>"
              style="width: 15.75%;margin-right: 2%;"/>
-      <input placeholder="Глубина" class="input-text wc_input_decimal" size="6" type="text" name="_pack_height"
+      <input placeholder="Глубина" class="input-text" type="text" name="_pack_height"
              value="<?php echo get_post_meta( $post->ID, 'pack_height', true ); ?>"
              style="width: 15.75%;margin-right: 0;"/>
    </span>
@@ -54,14 +54,14 @@ function art_woo_custom_fields_save( $post_id ) {
     $product = wc_get_product( $post_id );
 
     // Сохранение области тектса
-    $textarea_field = isset( $_POST['textarea-field'] ) ? sanitize_text_field( $_POST['textarea-field'] ) : '';
+    $textarea_field = isset( $_POST['textarea-field'] ) ?  $_POST['textarea-field'] : '';
     $product->update_meta_data( '_textarea', $textarea_field );
 
 
     // Сохранение габариты
-    $pack_length = isset( $_POST['_pack_length'] ) ? sanitize_text_field( $_POST['_pack_length'] ) : '';
-    $pack_width  = isset( $_POST['_pack_width'] ) ? sanitize_text_field( $_POST['_pack_width'] ) : '';
-    $pack_height = isset( $_POST['_pack_height'] ) ? sanitize_text_field( $_POST['_pack_height'] ) : '';
+    $pack_length = isset( $_POST['_pack_length'] ) ? $_POST['_pack_length'] : '';
+    $pack_width  = isset( $_POST['_pack_width'] ) ? ( $_POST['_pack_width'] ) : '';
+    $pack_height = isset( $_POST['_pack_height'] ) ? ( $_POST['_pack_height'] ) : '';
 
     $product->update_meta_data( 'pack_length', $pack_length );
     $product->update_meta_data( 'pack_width', $pack_width );
@@ -73,6 +73,27 @@ function art_woo_custom_fields_save( $post_id ) {
 }
 
 
-//add new gallery for products
+//add random sort
+
+add_filter( 'woocommerce_get_catalog_ordering_args', 'custom_woocommerce_get_catalog_ordering_args' );
+
+function custom_woocommerce_get_catalog_ordering_args( $args ) {
+    $orderby_value = isset( $_GET['orderby'] ) ? woocommerce_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+
+    if ( 'random_list' == $orderby_value ) {
+        $args['orderby'] = 'rand';
+        $args['order'] = '';
+        $args['meta_key'] = '';
+    }
+    return $args;
+}
+
+add_filter( 'woocommerce_default_catalog_orderby_options', 'custom_woocommerce_catalog_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'custom_woocommerce_catalog_orderby' );
+
+function custom_woocommerce_catalog_orderby( $sortby ) {
+    $sortby['random_list'] = 'Random';
+    return $sortby;
+}
 
 ?>

@@ -56,11 +56,23 @@ if ( post_password_required() ) {
         the_title( '<div class="title">', '</div>' );
         ?>
         <div class="params">
-            Материал: <span><?php echo get_post_meta($post->ID, '_textarea', true)?></span><br/>
-            Размеры:<br/>
-            Высота: <span><?php echo get_post_meta($post->ID, 'pack_length', true)?> мм</span><br/>
-            Ширина: <span><?php echo get_post_meta($post->ID, 'pack_width', true)?> мм</span><br/>
-            Глубина: <span><?php echo get_post_meta($post->ID, 'pack_height', true)?> мм</span><br/>
+            <?php
+                $pack_length = get_post_meta($post->ID, 'pack_length', true);
+                $pack_width = get_post_meta($post->ID, 'pack_width', true);
+                $pack_height = get_post_meta($post->ID, 'pack_height', true);
+            ?>
+            <?php if(!(strlen($pack_length) === 0 & strlen($pack_width) === 0 & strlen($pack_height) === 0)):?>
+                Размеры:<br/>
+            <?php endif;?>
+            <?php if(strlen($pack_length) > 1):?>
+                Высота: <span><?php echo $pack_length?> мм</span><br/>
+            <?php endif;?>
+            <?php if(strlen($pack_width) > 1):?>
+                Ширина: <span><?php echo $pack_width?> мм</span><br/>
+            <?php endif;?>
+            <?php if(strlen($pack_height) > 1):?>
+                Глубина: <span><?php echo $pack_height?> мм</span><br/>
+            <?php endif;?>
         </div>
         <div class="description">
             <?php  echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );?>
