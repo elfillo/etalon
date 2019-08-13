@@ -95,5 +95,4 @@ function custom_woocommerce_catalog_orderby( $sortby ) {
     $sortby['random_list'] = 'Random';
     return $sortby;
 }
-
 ?>
