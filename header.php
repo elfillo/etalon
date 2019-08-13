@@ -12,7 +12,8 @@
     <div class="header--top">
         <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="logo"></a>
         <div class="search">
-            <input type="text" placeholder="Я ищу...">
+<!--            <input type="text" placeholder="Я ищу...">-->
+            <?php echo do_shortcode('[wcas-search-form]')?>
         </div>
         <div class="contacts">
             <a href="mailto:etalon_irk@mail.ru" class="mail">

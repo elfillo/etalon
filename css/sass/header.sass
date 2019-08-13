@@ -33,15 +33,15 @@
       position: relative
       @media screen and (max-width: 1140px)
         display: none
-      &:after
-        content: ''
-        display: block
-        width: 17px
-        height: 17px
-        background: url("../img/icons/search.png")no-repeat center
-        position: absolute
-        right: 14px
-        top: calc(50% - 7px)
+      //&:after
+      //  content: ''
+      //  display: block
+      //  width: 17px
+      //  height: 17px
+      //  background: url("../img/icons/search.png")no-repeat center
+      //  position: absolute
+      //  right: 14px
+      //  top: calc(50% - 7px)
       input
         &::placeholder
           color: $black
@@ -195,3 +195,20 @@
       justify-content: center
       align-items: center
       font-size: 14px
+
+//for ajax search
+.dgwt-wcas-sf-wrapp
+  input[type='search']
+    padding: 0 !important
+    //height: auto !important
+    border: none !important
+    &:active
+      border: none
+      outline: none
+    &:focus
+      box-shadow: none !important
+    &:hover
+      border: none
+      outline: none
+  svg
+    left: 98% !important
