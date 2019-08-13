@@ -39,7 +39,7 @@
             <div class="shop">
                 <?php echo do_shortcode('[products]');?>
                 <div class="shop--show_all">
-                    <div class="btn btn--dark btn--big">Посмотреть все товары</div>
+                    <!--<div class="btn btn--dark btn--big">Посмотреть все товары</div>-->
                 </div>
             </div>
         </div>
