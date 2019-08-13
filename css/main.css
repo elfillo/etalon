@@ -28,7 +28,11 @@
                 align-items: flex-start; } }
     .header--top .logo {
       width: 165px;
-      height: 47px; }
+      height: 47px;
+      overflow: hidden; }
+      .header--top .logo img {
+        width: 100%;
+        height: auto; }
     .header--top .search {
       width: 597px;
       height: 56px;
@@ -282,7 +286,13 @@
   padding: 33px 0 59px 0;
   background-color: #333; }
   .footer .container .logo {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 165px;
+    height: 47px;
+    overflow: hidden; }
+    .footer .container .logo img {
+      width: 100%;
+      height: auto; }
   .footer .container .footer--menu {
     width: 100%;
     border-top: 2px solid #474747;
