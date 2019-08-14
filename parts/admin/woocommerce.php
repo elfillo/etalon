@@ -95,4 +95,11 @@ function custom_woocommerce_catalog_orderby( $sortby ) {
     $sortby['random_list'] = 'Random';
     return $sortby;
 }
+
+function etalon_setup() {
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'etalon_setup' );
 ?>

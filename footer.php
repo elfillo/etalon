@@ -27,10 +27,9 @@
                 <div class="footer--menu__column">
                     <div class="footer--menu__title">Наши соцсети:</div>
                     <div class="socials">
-                        <a href="#" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/vk.png" alt="#"></a>
-                        <a href="#" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/fb.png" alt="#"></a>
-                        <a href="#" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/ok.png" alt="#"></a>
-                        <a href="#" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/inst.png" alt="#"></a>
+                        <a href="https://vk.com/etalon_irk" target="_blank" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/vk.png" alt="#"></a>
+                        <a href="https://www.facebook.com/groups/etalonirk/" target="_blank" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/fb.png" alt="#"></a>
+                        <a href="https://www.instagram.com/etalon_irkutsk/" target="_blank" class="item"><img src="<?php echo get_template_directory_uri() ?>/img/icons/inst.png" alt="#"></a>
                     </div>
                     <div class="callback">
                         <div class="title">Хочу обратный звонок!</div>
