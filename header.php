@@ -9,6 +9,17 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<div class="modal">
+   <!-- <div class="modal_form">
+        <div class="close"><span></span><span></span></div>
+        <div class="title">Записаться на Гостевой визит</div>
+        <input type="text" placeholder="Ваше имя*" required>
+        <input type="tel" placeholder="Ваш телефон*" required>
+        <div class="description">*Все поля обязательны для заполнения. Оставляя свои контактные данные, Вы даете согласие на обработку персональных данных.</div>
+        <input class="btn" type="submit" value="Записаться!">
+    </div>-->
+    <?php echo do_shortcode('[contact-form-7 id="114" title="Гостевой визит (промо)"]')?>
+</div>
 <header class="header">
     <div class="header--top">
         <a href="/" class="logo"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="logo"></a>

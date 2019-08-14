@@ -77,3 +77,17 @@ $(document).ready(function () {
        }
     });
 });
+$(document).ready(function (){
+   $('.partners_button').click(function () {
+       $('.modal').css({'display': 'flex'});
+   });
+    $('.product_detail .button').click(function () {
+        $('.modal').css({'display': 'flex'});
+    });
+    $('.help_promo .button').click(function () {
+        $('.modal').css({'display': 'flex'});
+    });
+    $('.modal_form .close').click(function () {
+        $('.modal').css({'display': 'none'});
+    });
+});
