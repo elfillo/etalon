@@ -39,7 +39,7 @@
                         </div>
                         <div class="info">
                             <a href="tel:+73952707131">8 (3952) 707-131</a>
-                            <span>(c 9:00 до 20:00)</span>
+                            <span>(c 10:00 до 19:00)</span>
                         </div>
                     </div>
                 </div>
