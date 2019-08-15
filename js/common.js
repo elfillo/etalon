@@ -91,3 +91,29 @@ $(document).ready(function (){
         $('.modal').css({'display': 'none'});
     });
 });
+
+// $(document).ready(function () {
+//     var my_div = document.querySelector('.product_detail--image');
+//     var newDiv = document.createElement("div");
+//     var img = document.createElement("img");
+//    $('.product_detail--image').click(function () {
+//        event.preventDefault();
+//        console.log(event.target.src);
+//        var src_i = event.target.src;
+//        var targetEl = event.target;
+//        img.setAttribute('src', src_i);
+//        newDiv.appendChild(img);
+//        // my_div.appendChild(img);
+//        //var fist_img = $('.product_detail--image');
+//        //var first_img = fist_img[0].children[0].children[0].children[0];
+//        //console.log(first_img, 'first_img');
+//        //first_img.setAttribute('src', src_i);
+//        //console.log('hui');
+//
+//        var eElement = my_div;
+//        var newFirstElement; //element which should be first in E
+//
+//        eElement.insertBefore(newDiv, eElement.firstChild);
+//        //targetEl.remove();
+//    });
+// });
