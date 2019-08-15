@@ -25,6 +25,11 @@ input, textarea{
     border: none;
     outline: none;
 }
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
