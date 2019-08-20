@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 }
 ?>
 <section class="page_detail container">
-    <div class="sale_banner"></div>
+    <a href="/akczii" class="sale_banner"></a>
     <div class="product">
         <div class="breadcrumbs">
             <?php echo  woocommerce_breadcrumb()?>
