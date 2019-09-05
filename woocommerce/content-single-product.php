@@ -51,6 +51,7 @@ if ( post_password_required() ) {
 	?>
     </div>
 
+
 	<div class="summary entry-summary product_detail--text">
 		<?php
         the_title( '<div class="title">', '</div>' );
@@ -65,13 +66,13 @@ if ( post_password_required() ) {
                 Размеры:<br/>
             <?php endif;?>
             <?php if(strlen($pack_length) > 1):?>
-                Высота: <span><?php echo $pack_length?> мм</span><br/>
+                Высота: <span><?php echo $pack_length?></span><br/>
             <?php endif;?>
             <?php if(strlen($pack_width) > 1):?>
-                Ширина: <span><?php echo $pack_width?> мм</span><br/>
+                Ширина: <span><?php echo $pack_width?></span><br/>
             <?php endif;?>
             <?php if(strlen($pack_height) > 1):?>
-                Глубина: <span><?php echo $pack_height?> мм</span><br/>
+                Глубина: <span><?php echo $pack_height?></span><br/>
             <?php endif;?>
         </div>
         <div class="description">
